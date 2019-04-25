@@ -17,7 +17,6 @@ def format_by_charater_length(max_length: int, text: str):
     except StopIteration:
         updated_words.append(previous_word)
 
-    # print(text, "old")
     return " ".join(updated_words)
 
 
@@ -43,7 +42,6 @@ def format_by_charater_length_with_keyword(max_length: int, text: str, keyword: 
 
     # add keyword to first word
     updated_words[0] = keyword + updated_words[0]
-    # print(text, "old")
     return " ".join(updated_words)
 
 
