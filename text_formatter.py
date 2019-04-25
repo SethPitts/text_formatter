@@ -17,8 +17,8 @@ def format_by_charater_length(max_length: int, text: str):
     except StopIteration:
         updated_words.append(previous_word)
 
-    print(text, "old")
-    print(" ".join(updated_words), "updated")
+    # print(text, "old")
+    return " ".join(updated_words)
 
 
 def format_by_charater_length_with_keyword(max_length: int, text: str, keyword: str):
@@ -42,16 +42,16 @@ def format_by_charater_length_with_keyword(max_length: int, text: str, keyword: 
         updated_words.append(previous_word)
 
     # add keyword to first word
-    updated_words[0] = "COMMENT " +  updated_words[0]
-    print(text, "old")
-    print(" ".join(updated_words), "updated")
+    updated_words[0] = keyword + updated_words[0]
+    # print(text, "old")
+    return " ".join(updated_words)
 
 
 def main():
     text = "This req file was created by Seth Pitts on 09MAY2018 for ZC1/CHP"
 
-    format_by_charater_length(50, text)
-    format_by_charater_length_with_keyword(30, text, "COMMENT")
+    print(format_by_charater_length(50, text))
+    print(format_by_charater_length_with_keyword(30, text, "COMMENT "))
 
 
 if __name__ == '__main__':
